@@ -9,11 +9,18 @@ module.exports = ({ env }) => ({
         port: env.int('DATABASE_PORT', 5432),
         database: env('DATABASE_NAME', 'strapi'),
         username: env('DATABASE_USERNAME', ''),
-        password: env('DATABASE_PASSWORD', ''),
+        password: env('DATABASE_PASSWORD', '')
       },
       options: {
         ssl: false,
-      },
-    },
-  },
-});
+        pool: {
+          min: 0,
+          max: 10,
+          idleTimeoutMillis: 30000,
+          createTimeoutMillis: 30000,
+          acquireTimeoutMillis: 30000
+        }
+      }
+    }
+  }
+})

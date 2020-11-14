@@ -15,7 +15,7 @@ module.exports = ({ env }) => ({
         ssl: false,
         pool: {
           min: 0,
-          max: 10,
+          max: 50,
           idleTimeoutMillis: 50000,
           createTimeoutMillis: 50000,
           acquireTimeoutMillis: 50000

@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "name": "Products",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "brand": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "price_pen": {
+      "type": "decimal"
+    },
+    "price_usd": {
+      "type": "decimal"
+    },
+    "categories": {
+      "via": "product",
+      "collection": "categories"
+    },
+    "order": {
+      "via": "products",
+      "model": "orders"
+    }
+  }
+}

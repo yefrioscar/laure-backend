@@ -114,4 +114,5 @@ exports
 build
 
 
-/config/database.js
+*database.js
+config/database.js

@@ -14,10 +14,6 @@
     "name": {
       "type": "string"
     },
-    "product": {
-      "model": "products",
-      "via": "categories"
-    },
     "state": {
       "type": "string"
     }

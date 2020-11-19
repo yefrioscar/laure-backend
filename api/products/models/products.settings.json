@@ -27,12 +27,7 @@
       "type": "decimal"
     },
     "categories": {
-      "via": "product",
       "collection": "categories"
-    },
-    "order": {
-      "via": "products",
-      "model": "orders"
     }
   }
 }

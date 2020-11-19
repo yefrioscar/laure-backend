@@ -20,12 +20,11 @@
     "phone_number": {
       "type": "string"
     },
-    "products": {
-      "collection": "products",
-      "via": "order"
-    },
     "dni": {
       "type": "string"
+    },
+    "products": {
+      "collection": "products"
     }
   }
 }

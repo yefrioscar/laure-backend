@@ -10,4 +10,14 @@ module.exports = ({ env }) => ({
       },
     },
   },
+  email: {
+    provider: 'sendgrid',
+    providerOptions: {
+      apiKey: env('SENDGRID_API_KEY', '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'),
+    },
+    settings: {
+      defaultFrom: 'hi@yefri.dev',
+      defaultReplyTo: 'hi@yefri.dev',
+    },
+  },
 });

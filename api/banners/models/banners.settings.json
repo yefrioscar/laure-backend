@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "products",
+  "collectionName": "banners",
   "info": {
-    "name": "Products",
+    "name": "banners",
     "description": ""
   },
   "options": {
@@ -11,23 +11,11 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "brand": {
-      "type": "string"
-    },
     "name": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
-    },
-    "price_pen": {
-      "type": "decimal"
-    },
-    "price_usd": {
-      "type": "decimal"
-    },
-    "categories": {
-      "collection": "categories"
+    "brand": {
+      "type": "string"
     },
     "image": {
       "collection": "file",
@@ -39,6 +27,15 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "price_pen": {
+      "type": "decimal"
+    },
+    "price_usd": {
+      "type": "decimal"
+    },
+    "categories": {
+      "collection": "categories"
     },
     "state": {
       "type": "boolean"

@@ -11,9 +11,6 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "name": {
-      "type": "string"
-    },
     "direction": {
       "type": "string"
     },

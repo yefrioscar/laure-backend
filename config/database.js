@@ -12,15 +12,8 @@ module.exports = ({ env }) => ({
         password: env('DATABASE_PASSWORD', 'canservero147')
       },
       options: {
-        ssl: false,
-        pool: {
-          min: 0,
-          max: 50,
-          idleTimeoutMillis: 50000,
-          createTimeoutMillis: 50000,
-          acquireTimeoutMillis: 50000
-        }
-      }
-    }
-  }
-})
+        useNullAsDefault: true,
+      },
+    },
+  },
+});

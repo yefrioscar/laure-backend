@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/orders": {
+    "/banners": {
       "get": {
         "deprecated": false,
-        "description": "Find all the orders's records",
+        "description": "Find all the banners's records",
         "responses": {
           "200": {
-            "description": "Retrieve orders document(s)",
+            "description": "Retrieve banners document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Orders"
+                    "$ref": "#/components/schemas/Banners"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Orders"
+          "Banners"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new orders record",
+        "description": "Create a new banners record",
         "responses": {
           "200": {
-            "description": "Retrieve orders document(s)",
+            "description": "Retrieve banners document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Orders"
+                  "$ref": "#/components/schemas/Banners"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Orders"
+          "Banners"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewOrders"
+                "$ref": "#/components/schemas/NewBanners"
               }
             }
           }
         }
       }
     },
-    "/orders/count": {
+    "/banners/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of orders documents",
+        "description": "Retrieve the numver of banners documents",
         "responses": {
           "200": {
-            "description": "Retrieve orders document(s)",
+            "description": "Retrieve banners document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Orders"
+          "Banners"
         ],
         "parameters": []
       }
     },
-    "/orders/{id}": {
+    "/banners/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one orders record",
+        "description": "Find one banners record",
         "responses": {
           "200": {
-            "description": "Retrieve orders document(s)",
+            "description": "Retrieve banners document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Orders"
+                  "$ref": "#/components/schemas/Banners"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Orders"
+          "Banners"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single orders record",
+        "description": "Update a single banners record",
         "responses": {
           "200": {
-            "description": "Retrieve orders document(s)",
+            "description": "Retrieve banners document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Orders"
+                  "$ref": "#/components/schemas/Banners"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Orders"
+          "Banners"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewOrders"
+                "$ref": "#/components/schemas/NewBanners"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single orders record",
+        "description": "Delete a single banners record",
         "responses": {
           "200": {
-            "description": "deletes a single orders based on the ID supplied",
+            "description": "deletes a single banners based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Orders"
+          "Banners"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Orders": {
+      "Banners": {
         "required": [
           "id"
         ],
@@ -522,16 +522,89 @@
           "id": {
             "type": "string"
           },
-          "direction": {
+          "name": {
             "type": "string"
           },
-          "phone_number": {
+          "brand": {
             "type": "string"
           },
-          "dni": {
-            "type": "string"
+          "image": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name",
+                "hash",
+                "mime",
+                "size",
+                "url",
+                "provider"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "alternativeText": {
+                  "type": "string"
+                },
+                "caption": {
+                  "type": "string"
+                },
+                "width": {
+                  "type": "integer"
+                },
+                "height": {
+                  "type": "integer"
+                },
+                "formats": {
+                  "type": "object"
+                },
+                "hash": {
+                  "type": "string"
+                },
+                "ext": {
+                  "type": "string"
+                },
+                "mime": {
+                  "type": "string"
+                },
+                "size": {
+                  "type": "number"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "previewUrl": {
+                  "type": "string"
+                },
+                "provider": {
+                  "type": "string"
+                },
+                "provider_metadata": {
+                  "type": "object"
+                },
+                "related": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           },
-          "products": {
+          "price_pen": {
+            "type": "number"
+          },
+          "price_usd": {
+            "type": "number"
+          },
+          "categories": {
             "required": [
               "id"
             ],
@@ -539,32 +612,11 @@
               "id": {
                 "type": "string"
               },
-              "brand": {
-                "type": "string"
-              },
               "name": {
                 "type": "string"
               },
-              "description": {
-                "type": "string"
-              },
-              "price_pen": {
-                "type": "number"
-              },
-              "price_usd": {
-                "type": "number"
-              },
-              "categories": {
-                "type": "string"
-              },
-              "image": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "state": {
-                "type": "boolean"
+                "type": "string"
               },
               "published_at": {
                 "type": "string"
@@ -577,25 +629,34 @@
               }
             }
           },
+          "state": {
+            "type": "boolean"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
           }
         }
       },
-      "NewOrders": {
+      "NewBanners": {
         "properties": {
-          "direction": {
+          "name": {
             "type": "string"
           },
-          "phone_number": {
+          "brand": {
             "type": "string"
           },
-          "dni": {
+          "price_pen": {
+            "type": "number"
+          },
+          "price_usd": {
+            "type": "number"
+          },
+          "categories": {
             "type": "string"
           },
-          "products": {
-            "type": "string"
+          "state": {
+            "type": "boolean"
           },
           "published_at": {
             "type": "string",
@@ -613,7 +674,7 @@
   },
   "tags": [
     {
-      "name": "Orders"
+      "name": "Banners"
     }
   ]
 }

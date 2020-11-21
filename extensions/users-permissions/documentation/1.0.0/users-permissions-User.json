@@ -1250,6 +1250,37 @@
                 "type": "string"
               }
             }
+          },
+          "orders": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "direction": {
+                "type": "string"
+              },
+              "phone_number": {
+                "type": "string"
+              },
+              "dni": {
+                "type": "string"
+              },
+              "products": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -1290,6 +1321,9 @@
             "default": false
           },
           "role": {
+            "type": "string"
+          },
+          "orders": {
             "type": "string"
           },
           "created_by": {

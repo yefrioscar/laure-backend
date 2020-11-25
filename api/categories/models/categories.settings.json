@@ -15,7 +15,7 @@
       "type": "string"
     },
     "state": {
-      "type": "string"
+      "type": "boolean"
     }
   }
 }

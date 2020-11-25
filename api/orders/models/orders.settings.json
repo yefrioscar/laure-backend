@@ -14,12 +14,6 @@
     "direction": {
       "type": "string"
     },
-    "phone_number": {
-      "type": "string"
-    },
-    "dni": {
-      "type": "string"
-    },
     "products": {
       "collection": "products"
     }

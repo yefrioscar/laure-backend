@@ -61,6 +61,15 @@
     },
     "orders": {
       "collection": "orders"
+    },
+    "phone_number": {
+      "type": "string"
+    },
+    "dni": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
     }
   }
 }
